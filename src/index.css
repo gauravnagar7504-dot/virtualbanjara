@@ -1,0 +1,95 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  *, *::before, *::after {
+    font-family: 'Poppins', system-ui, -apple-system, sans-serif !important;
+  }
+
+  html, body {
+    font-family: 'Poppins', system-ui, -apple-system, sans-serif !important;
+    color: #1B1A17;
+    background-color: #FAF6EF;
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background-color: #FAF6EF;
+    color: #1B1A17;
+    overflow-x: hidden;
+  }
+
+  h1, h2, h3, h4, h5, h6, .font-heading, .font-serif, .font-sans, .font-mono, p, span, div, li, a, button, input, textarea, select, code, pre {
+    font-family: 'Poppins', system-ui, -apple-system, sans-serif !important;
+    letter-spacing: normal;
+  }
+
+  ::selection {
+    background-color: #C0392B;
+    color: #FFFFFF;
+  }
+
+  /* Custom Editorial Scrollbar with Logo Amber */
+  ::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #FAF6EF;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #D8CCB9;
+    border-radius: 3px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: #D4881E;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+/* Subtle Journey Line Style with Logo Gold */
+.journey-line-pattern {
+  background-image: radial-gradient(#C5A059 1px, transparent 1px);
+  background-size: 16px 16px;
+}
+
+.paper-texture {
+  background-color: #FAF6EF;
+  background-image: radial-gradient(#E8DFD0 0.75px, transparent 0.75px);
+}
+
+/* Minimum 16px (>= 15px) left and right padding on mobile for outer containers */
+@media (max-width: 640px) {
+  .max-w-7xl.mx-auto {
+    padding-left: max(16px, env(safe-area-inset-left));
+    padding-right: max(16px, env(safe-area-inset-right));
+  }
+}
+
+
+/* Infinite Smooth Marquee for Photo Gallery Slider */
+@keyframes infiniteMarquee {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+  100% {
+    transform: translate3d(-50%, 0, 0);
+  }
+}
+
+.animate-marquee-slow {
+  display: flex !important;
+  width: max-content !important;
+  animation: infiniteMarquee 38s linear infinite !important;
+  will-change: transform;
+}
+
+.animate-marquee-slow:hover {
+  animation-play-state: paused !important;
+}
