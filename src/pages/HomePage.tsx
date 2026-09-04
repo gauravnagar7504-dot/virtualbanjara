@@ -37,30 +37,22 @@ export const HomePage: React.FC<HomePageProps> = ({ navigate, onOpenVideo }) => 
  {/* ========================================================================= */}
  {/* 01 — HERO SECTION (Editorial Grand Cover) */}
  {/* ========================================================================= */}
- <section className="relative min-h-[580px] sm:min-h-[640px] lg:min-h-[700px] flex items-center overflow-hidden bg-[#F5EFEB] border-b border-[#E8DFD0]">
- {/* Full Bleed Illustrated Banner Artwork */}
- <div 
- className="absolute inset-0 bg-cover bg-no-repeat bg-[position:82%_center] md:bg-right lg:bg-[position:right_center]"
- style={{ backgroundImage: "url('/hero-banner.png')" }}
- />
+      <section className="relative min-h-[460px] sm:min-h-[520px] lg:min-h-[700px] flex items-center overflow-hidden bg-[#FCF4E5] border-b border-[#E8DFD0]">
+        {/* Full Bleed Illustrated Banner Artwork — Hidden on phone & tablet, visible on desktop */}
+        <div 
+          className="hidden lg:block absolute inset-0 bg-cover bg-no-repeat bg-right lg:bg-[position:right_center]"
+          style={{ backgroundImage: "url('/hero-banner.png')" }}
+        />
 
- {/* Soft atmospheric gradient for crisp typography */}
- <div className="absolute inset-0 bg-gradient-to-r from-[#F5EFEB] via-[#F5EFEB]/90 to-transparent sm:via-[#F5EFEB]/65 md:hidden" />
+        {/* Soft atmospheric gradient for crisp typography on desktop */}
+        <div className="hidden lg:block absolute inset-0 bg-gradient-to-r from-[#FCF4E5] via-[#FCF4E5]/80 to-transparent" />
 
  <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16 md:py-24 relative z-10 w-full">
  <div className="max-w-xl lg:max-w-2xl space-y-6">
- {/* Editorial Eyebrow */}
- <div className="flex items-center space-x-3 text-xs font-sans uppercase tracking-[0.2em] text-[#B83226] font-semibold">
- <span>EST. 2019</span>
- <span className="text-[#C88218]">•</span>
- <span>JAIPUR, RAJASTHAN</span>
- <span className="text-[#C88218]">•</span>
- <span>726K+ COMMUNITY</span>
- </div>
 
  {/* Master Headline */}
  <div className="space-y-3">
- <h1 className="font-heading text-3xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-[#1C1917] leading-[1.12]">
+ <h1 className="font-heading text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-[#1C1917] leading-[1.15]">
  One Bite, One Story <br />
  <span className="text-[#B83226] italic font-serif font-normal">at a Time.</span>
  </h1>
